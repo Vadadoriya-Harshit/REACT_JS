@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+            class Test 
+            {
+                t1 = function x()
+                {
+                    console.log("funciton X");
+                }
+
+                y(r)
+                {
+                    console.log("funciton Y" + r);
+                }
+
+               t2 =  function () 
+                {
+                    console.log("funciton Anonymous...!");
+                }
+
+                t3 =   ()=>
+                {
+                    console.log("funciton Arrow..!");
+                }
+
+                constructor () 
+                {
+                    console.log("This will be called AUTOMATICALLY When an OBJECT of a  CLASS is created...")
+                }
+
+                constructor () 
+                {
+                    console.log("This will be called AUTOMATICALLY When an OBJECT of a  CLASS is created...")
+                }
+
+            }
+
+            const u = new Test;
+            
+            const u1 = new Test;
+            const u2 = new Test;
+            const u3 = new Test;
+            u1.t1();
+            u1.y(" Hello");
+            u1.t2();
+            u1.t3();
+            u2.t3();
+            u3.t3();
+
+
+    </script>
+    
+</body>
+</html>

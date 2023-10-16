@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <script>
+    
+    
+    const Students = {
+
+        fullname: function(){
+            return this.fname + " " + this.lname;
+        }
+    }
+
+    const Student1 = {
+        fname:"Raviraj",
+        lname:"Parmar"
+
+    }
+
+    const Student2 = {
+        fname:"Mayur",
+        lname:"Songara"
+
+    }
+
+   console.log( Students.fullname.call(Student1,2,3));
+   console.log( Students.fullname.apply(Student2,[2,3]));
+//    console.log( Students.fullname.bind(Student2,[2,3]));
+    
+      
+  </script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A 
+        {
+           t1 =  function fun()
+            {
+                console.log("T1");
+            }
+
+           t2 =  function()
+            {
+                console.log("T2");
+            }
+            t3 = ()=>
+            {
+                console.log("T3");
+            }
+
+          
+
+            fun1()
+            {
+                console.log("FUN123");
+            }
+
+         
+
+            static  xyz() {
+                console.log("STATIC METHOD");
+                
+            }
+
+            constructor(x,y)
+            {
+                console.log(x+y);
+            }
+           
+        }
+
+        class B 
+        {
+            fun1(x,y)
+            {
+                console.log(x+y);
+            }
+
+           
+        }
+
+        const ob = new A(12,10);
+        const ob1 = new B;
+        ob1.fun1(20,40);
+
+        ob.t1();
+        ob.t2();
+        ob.t3();
+        ob.fun1();
+        A.xyz();
+    </script>
+</body>
+</html>

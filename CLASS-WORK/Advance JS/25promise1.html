@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function display(x)
+        {
+            console.log(x);
+        }
+
+        const P = new Promise(function(r,e){
+
+            r="Resolve";
+             e="Error"
+            if(r)
+            {
+                console.log(r)
+            }
+
+            else 
+            {
+                console.log(e);
+            }
+        })
+
+        P.then(
+
+        function(resp) {display(resp)},
+
+        function(err1) {display(err1)}
+
+        )
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const radius = [1,2,3];
+
+    //    const x = function ()
+    //    {
+    //     const op=[];
+    //     for(i=0;i<radius.length;i++)
+    //     {
+    //         op.push(Math.PI * radius[i]*radius[i]);
+    //     }
+    //     return op;
+    //    }
+
+    // console.log(x());
+
+//    first para ==> values 
+//    second para ==> index 
+//    third para ==> array
+   
+
+   x = radius.map(function(v,i,arr){
+
+    // return v;// values
+
+    // return i;//index
+
+    // return arr;
+
+    return Math.PI * i*i;
+
+   })
+
+   console.log(x);
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Xyz 
+        {
+            constructor(fnm,lnm)
+            {
+                this.fnm = fnm;
+                this.lnm =lnm;
+
+                return this.fname + " "+this.lname;
+            }
+        }
+
+        const obj = new Xyz("name","surnmae");
+        console.log(obj.fnm);
+        console.log(obj.lnm)
+
+
+
+
+
+
+
+
+
+
+
+
+       function Test(fname,lname)
+       {
+
+        this.fname = fname;
+        this.lname =lname;
+           return ( this.fname + this.lname);
+       }
+
+  const father = new Test("Name"," Surname");
+  const mother = new Test("Name1"," Surname1");
+  const son = new Test("Name2"," Surname2");
+
+  console.log(father.fname + " " + father.lname);
+  console.log(mother.fname + " " + mother.lname);
+  console.log(son.fname + " " + son.lname);
+
+    
+    </script>
+    
+</body>
+</html>

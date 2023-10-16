@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>        
+        
+        const radius = [1,2];
+
+        console.log(radius.length);//2
+        console.log(Math.PI);
+
+    //  const calcArea= function()
+    //   {
+    //     const op = [];
+    //     for(let i=0;i<radius.length;i++)
+    //     {           
+    //         //console.log(Math.PI * radius[i] * radius[i]);// 
+    //          op.push(Math.PI * radius[i] * radius[i]);
+    //          //console.log(op)         
+
+    //     }
+    //      return op;
+    //    // console.log(op)
+    //   }
+
+    //    console.log(calcArea());
+
+       const area = function (x)//1
+       {
+        return Math.PI *x*x;////3.14 * 1* 1
+       }
+
+
+       const calculate = function(r,xyz)
+       {
+
+        const op =[];
+        for(let i=0;i<r.length;i++)
+        {
+            op.push(area(r[i]))
+        }
+
+        return op;
+       }
+
+      console.log( calculate( radius  ,area) );
+      
+       
+      
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

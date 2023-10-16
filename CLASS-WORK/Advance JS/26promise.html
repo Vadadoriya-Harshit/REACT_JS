@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Promise ==> js no built-in-class  -->
+
+    <script>
+
+
+function Display(xyz)
+{
+    console.log(xyz)
+}
+
+const obj = new Promise(function(success,failure){
+
+    if(!success)
+    {
+        success("Conneted...!");
+    }
+    else 
+    {
+        failure("not Connected...!");
+    }
+
+
+})
+
+obj.then(
+    function(res){Display(res)},
+    function(err){Display(err)}
+    
+    )
+
+    </script>
+
+
+</body>
+</html>

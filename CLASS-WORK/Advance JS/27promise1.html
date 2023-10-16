@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function Emotions(emotion)
+        {
+            console.log(emotion);
+        }
+
+        const promiseMe = new Promise(function(call,jouTimeMaleTo){
+
+            if(!call)
+            {
+                call("Thank you for calling...!");
+            }
+            else 
+            {
+                jouTimeMaleTo("chal bag...!...!");
+            }
+
+
+        })
+
+        promiseMe.then(
+            function(happy){Emotions(happy)},
+            function(sad){Emotions(sad)}
+        )
+
+    </script>
+    
+</body>
+</html>

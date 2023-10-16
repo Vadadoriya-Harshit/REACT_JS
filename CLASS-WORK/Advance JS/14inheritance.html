@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    Inheritance: to access property of onc class to another class 
+
+    ==> reuse the code
+
+
+    class childClassName extends ParentClassName
+
+
+    class Parent 
+    {
+        property 
+    }
+
+    
+
+    class Child extends Parent
+    {
+        ..
+    } -->
+
+    <script>
+
+        class Parent 
+        {
+            property = function () 
+            {
+                document.write("I am Parent.. I wont give you anything...!<br>");
+            }
+        }
+
+        class Son extends Parent
+        {
+
+        }
+
+        class Daughter extends Parent
+        {
+
+        }
+
+       //const myProp = new Parent;
+        // myProp.property();
+
+        const wantProp1 = new Son;
+        const wantProp2 = new Daughter;
+        // wantProp1.property();
+        wantProp2.property();
+
+        // ====>
+
+        // Ex: 
+
+        // father : 100 
+        // mother: 100 extends father
+        // son : 30 extends mother
+        // daughter : 70 extends mother
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="b1">Get Text</button>
+    <button id="b2">Get JSON</button>
+    <button id="b3">Get API DATA</button>
+    <hr>
+
+    <p id="output"></p>
+
+    <form  id="myform">
+        <div>
+            <input type="text" id="title" placeholder="Title">
+        </div>
+        <div>
+            <textarea id="body" placeholder="Body"></textarea>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+
+
+    <script>
+
+        btn1 = document.getElementById('b1');
+        btn2 = document.getElementById('b2');
+        btn3 = document.getElementById('b3');
+        form = document.getElementById('myform');
+
+        op = document.getElementById('output');
+
+        btn1.addEventListener("click",GetText);
+        btn2.addEventListener("click",GetJSON);
+        btn3.addEventListener("click",GetAPI);
+        form.addEventListener("submit",ChangeAPIdata);
+
+        function GetText()
+        {
+            //fetch promise
+            fetch('mayur.txt')
+            //fetch response
+            .then((res)=>{return res.text()})
+            // fetch data
+            .then((data)=>{
+                // console.log(data)
+                op.innerHTML = data;
+            
+            })
+        }
+
+        function GetJSON()
+        {
+            fetch('details.json')
+            .then((res)=>{return res.json()})
+            .then((data)=>{
+                // console.log(data[0].name);
+
+                // for(i=0;i<data.length;i++)
+                // {
+                //     console.log(data[i].id +" "+data[i].name);
+                // }
+
+                html = "<h2>### Details ###</h2>"
+                data.forEach((users)=>{
+                    // console.log(v.id)
+                    // console.log(v.name)
+                    html+=`
+                    <ul>
+                        <li>${users.id}</li>    
+                        <li>${users.name}</li>
+                    </ul>                
+                    `
+                })
+
+                op.innerHTML = html;
+            })
+        }
+
+
+
+
+        function GetAPI()
+        {
+            fetch('https://jsonplaceholder.typicode.com/photos')
+            .then((res)=>{return res.json()})
+            .then((data)=>{
+                // console.log(data)
+
+                html = "<h2>### API DATA ###</h2>"
+                data.forEach((p)=>{
+                    // console.log(v.id)
+                    // console.log(v.name)
+
+                    // x = x+ y;
+                    // x+=y
+                    // backtik
+                    html= html + `
+                        <li>${p.albumId}</li>    
+                        <li>${p.id}</li>
+                        <li>${p.title}</li>    
+                        <li><img src="${p.url}"/></li>
+                        <li><img src='${p.thumbnailUrl}'/></li>    
+                        
+                    </ul>                
+                    `
+                })
+
+                op.innerHTML = html;
+            
+            
+            
+            
+            })
+        }
+
+        function ChangeAPIdata(e)
+        {
+            e.preventDefault();
+
+            t = document.getElementById('title').value;
+            b = document.getElementById('body').value;
+
+            fetch('https://jsonplaceholder.typicode.com/posts',{
+
+                method:"POST",
+                "accept":"application/json,text/plain,*/*",
+                "header":{
+                    "content-type":"application/json"
+                },
+                body:JSON.stringify({title:t,body:b})
+
+            })
+            .then((res)=>{return res.json()})
+            .then((data)=>{
+
+                console.log(data)
+
+
+            })
+        }
+        
+    </script>
+    
+</body>
+</html>

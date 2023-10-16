@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Demo {
+        x = function Test() {
+          document.write("Simple Function..!<br>");
+        };
+
+        Test1() {
+          document.write("Simple Function1..!<br>");
+        }
+
+        y = function () {
+          document.write("Simple Function2..!<br>");
+        };
+
+        z = () => {
+          document.write("Simple Function3..!<br>");
+        };
+
+        //    constructor ()
+        //     {
+        //         document.write("Constructor...!..!<br>");
+        //     }
+
+        constructor(x, y) {
+          document.write(x + y + "<br>");
+        }
+
+        static  karan()
+        {
+          document.write("hello Karan..!")
+        }  
+   
+
+     
+      }
+
+      const t1 = new Demo(12, 10);
+      const t2 = new Demo(1.2, 3.4);
+      const t3 = new Demo("hi", " hello");
+
+      t1.x();
+      t1.Test1();
+      t1.y();
+      t1.z();
+
+      Demo.karan();
+
+    
+    </script>
+  </body>
+</html>
