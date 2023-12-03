@@ -1,0 +1,28 @@
+{
+  "Employe": [
+    {
+      "id": 1,
+      "name": "Harshit",
+      "email": "H@gmail.com",
+      "phone": "9988776655"
+    },
+    {
+      "id": 2,
+      "name": "uday",
+      "email": "u@gmail.com",
+      "phone": "6677889954"
+    },
+    {
+      "id": 3,
+      "name": "vivek",
+      "email": "v@gmail.com",
+      "phone": "2233445566"
+    },
+    {
+      "id": 4,
+      "name": "raj",
+      "email": "raj@gmail.com",
+      "phone": "5566778899"
+    }
+  ]
+}
